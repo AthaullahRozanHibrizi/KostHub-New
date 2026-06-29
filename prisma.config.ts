@@ -20,6 +20,7 @@ export default defineConfig({
   datasource: {
     // Kembalikan ke DATABASE_URL agar aman saat aplikasi berjalan di mode serverless
     url: process.env.DATABASE_URL,
+    // @ts-ignore - Prisma 7 config types might not include directUrl yet, but CLI needs it
     directUrl: process.env.DIRECT_URL,
   },
 })
